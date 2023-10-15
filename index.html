@@ -1,35 +1,109 @@
 <! HTML DOCTYPE>
 <html lang="pt">
+
 <cabeça>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=borda">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela com Acessibilidade</title>
+    <título>Documento</título>
 </cabeça>
+
 <corpo>
-    <table border="1" summary="Tabela com os preços em reais 
-  de ameixa preta e pera d'água  com um nível de cabeçalho de linha e um 
-  nível de cabeçalho de coluna">
+    <img src="table_complex.png" largura="60%">
+    <Br>
+    <table border="1" summary="Preços em reais no 
+varejo e no atacado para laranjas e maçãs 
+importadas e nacionais nas cidades do
+ Rio de Janeiro e de São Paulo. 
+Existem dois níveis de cabeçalhos de colunas.">
 
-<legenda>
-	Preços em reais de ameixa e pera em Campinas 
-</legenda>
+        <legenda>
+            Preços em reais para laranjas e maçãs importadas e
+            nacionais nas cidades do Rio de Janeiro
+            e de São Paulo
+        </legenda>
 
-<Tr>
-	<TD></TD>
-	<th>Ameixa preta</th>
-	<th>Pera d'água</th>
-</Tr>
-<Tr>
-	<th>Atacado</th>>
-	<TD>1,00</TD>
-	<TD>1,50</TD>
-</Tr>
-<Tr>
-	<th>Varejo</th>
-	<TD>2,00</TD>
-	<TD>2,50</TD>
-</Tr>
-</mesa>
+        <Cabeça>
+            <Tr>
+                <TD></TD>
+                <th colspan="2" id="importada">Importada</th >
+                <th colspan="2" id="nacional">Nacional</th >
+            </Tr>
+            <Tr>
+                <TD></TD>
+                <th id="laranjas-imp">Laranjas</th >
+                <th id="macas-imp">Maçãs</th >
+                <th id="laranjas-nac">Laranjas</th >
+                <th id="macas-nac">Maçãs</th >
+            </Tr>
+        </Cabeça>
+        <tbody>
+            <Tr>
+                <th id="rio" colspan="5">Rio de Janeiro</th >
+            </Tr>
+            <Tr>
+                <!--Usar id e headers para linkar o conteúdo das células com os respectivos cabeçalhos.-->
+                <th headers="rio" id="atacado-rio">Atacado</th >
+                <TD headers="importada laranjas-imp rio atacado-rio">
+                    1,00
+                </Td>
+                <td headers="importada macas-imp rio atacado-rio">
+                    1,25
+                </Td>
+                <td headers="nacional laranjas-nac rio atacado-rio">
+                    1,20
+                </Td>
+                <td headers="nacional macas-nac rio atacado-rio">
+                    1,00
+                </Td>
+            </Tr>
+            <Tr>
+                <th headers="rio" id="Varejo-rio">Varejo</th >
+                <TD headers="importada laranjas-imp rio varejo-rio">
+                    2,00
+                </Td>
+                <TD headers="importada macas-imp rio varejo-rio">
+                    3,00
+                </Td>
+                <TD headers="Nacional Laranjas-NAC Rio Varejo-Rio">
+                    1,80
+                </Td>
+                <td headers="nacional macas-nac rio atacado-rio">
+                    1,60
+                </Td>
+
+                <Tr>
+                    <th id="sp" colspan="5">São Paulo</th >
+                </Tr>
+                <Tr>
+                    <th headers="sp" id="atacado-ap">Atacado</th >
+                    <td headers="importada laranjas-imp sp atacado-sp">
+                        1,20
+                    </Td>
+                    <td headers="importada macas-imp sp atacado-sp">
+                        1,30
+                    </Td>
+                    <td headers="nacional laranjas-nac sp atacado-sp">
+                        1,00
+                    </Td>
+                    <td headers="nacional macas-nac sp atacado-sp">
+                        0,80
+                    </Td>
+                </Tr>
+                <Tr>
+                    <th headers="sp" id="Varejo-sp">Varejo</th >
+                    <TD headers="importada laranjas-imp sp varejo-sp">
+                        1,60
+                    </Td>
+                    <td headers="importada macas-imp sp varejo-sp">
+                        2,00
+                    </Td>
+                    <td headers="nacional laranjas-nac sp varejo-sp">
+                        2,00
+                    </Td>
+                    <td headers="nacional macas-nac sp atacado-sp">
+                        1,50
+                    </Td>
 </corpo>
+
 </.html>
